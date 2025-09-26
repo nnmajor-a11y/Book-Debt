@@ -1,0 +1,184 @@
+/*Styles for the Header and Links*/
+header{
+    background-color: #2e0e24;
+    text-align: left;
+    padding-left: 1rem;
+    letter-spacing: 0.25em;
+
+}
+
+/*Styles for Headers*/
+h1, h1 a, h1 a:visited{
+    color: #ffc680;
+}
+
+h1 a:hover{
+    color: #fdebd7;
+}
+
+h1, h2, h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{}
+h3{}
+h4, h5, h6{}
+
+/*Styles for Navagation-------------------*/
+nav{
+    font-size: 125%;
+    letter-spacing: 0.1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f78aa5;
+    background-color: #451d47;
+}
+
+nav a:link, nav a:visited{
+    color: #ec7e99;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #fdc0cf;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+nav li{}
+
+
+/*Styles for General Links-------------------*/
+a{
+    text-decoration: none;
+    color: #5ea8ee;
+}
+a:hover, a:focus{}
+
+/*Styles for the Image Placement(s)-------------------*/
+img{}
+
+/*Styles for the Webpage Content-------------------*/
+body{
+    color: #ffc680;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #3e1641
+}
+
+/*Styles for the Main Content Sec.*/
+main{}
+
+/*Styles for the List(s) Content*/
+dt{}
+ul, ol {}
+
+/*Styles for the Interactive Sec.-------------------*/
+button, input, select, textarea{}
+
+/*Styles for the Footer Sec.-------------------*/
+footer{}
+
+/*Style for the Site-------------------*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*DiV IDs-------------------*/
+#wrapper {
+    background-color: #5a2b5d;
+    background-repeat: no-repeat;
+}
+
+#contact{
+    color: #aab4cf;
+    font-size: 80%;
+    text-align: center;
+}
+
+/*Styles for Media Format(s)-------------------*/
+
+/*Smaller Screens ie. Phones*/
+@media (max-width: 599px) {
+    
+    #wrapper{
+        margin: auto;
+        width: 90%;
+        border: 2px solid #2e0e24;
+        box-shadow: 0.1em .5em 0.5em #2e0e34;
+    }
+
+    h1{
+        margin: auto;
+        padding: .5em .5em;
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack vertically */
+        align-items: center;     /* Optional: center-align the links */
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0.5em 0; /* Space between links */
+        border: 2px solid #902c45;
+        width: 90%;
+        text-align: center;
+
+
+    }
+}
+
+/*medium Screens*/
+@media(min-width: 600px){
+
+    #wrapper{
+        margin: auto;
+        width: 90%;
+        border: 2px solid #2e0e24;
+        box-shadow: 0.1em .5em 0.5em #2e0e34;
+    }
+
+    h1{
+        padding-left: 0.5em;
+    }
+
+    nav{
+        margin-bottom: 0.9em;
+        text-align: center;
+    }
+
+  nav ul {
+        display: flex;
+        flex-direction: row; /* Stack vertically */
+        align-items: center;     /* Optional: center-align the links */
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0.5em 0.1em; /* Space between links */
+        border: 2px solid #902c45;
+        width: 80%;
+        text-align: center;
+
+
+    }
+
+    form{
+        width: 60%;
+        max-width: 30em;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 7em 1fr;
+        grid-template-rows: auto;
+
+    }
+    /*Keep to Adjust colum
+    Section for Colums*/
+    section{}
+
+    .flow{}
+
+
+}
