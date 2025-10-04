@@ -5,13 +5,18 @@
     <head>
         <title>Book Debt</title>
         <!--Logo for the Head-->
-        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="Website Image Assets/favicon_io/favicon.ico" type="image/x-icon">
+        <link rel="android-chrome-192x192" href="Website Image Assets/favicon_io/android-chrome-192x192.png" type="image/png">
+        <link rel="apple-touch-icon" href="Website Image Assets/favicon_io/apple-touch-icon.png" type="image/png">
 
         <!--Meta-->
         <meta charset="utf-8">
         <!--Inclue Different Screen Size-->
-        <meta name="viewport" content="width=device-width, initial-scal=1.0">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Meta Discriptions-->
+        <meta name="Description" content="
+           
+        ">
         <!--Link to the Styles Sheet CSS-->
         <link rel="stylesheet" href="bookdebt.css">
 
@@ -23,9 +28,10 @@
         <div id="wrapper">
             <!--The Title of Webpage
             Same for every Webpage on Website-->
-            <head>
+            <header class="better-header">
+                <img src="Website Image Assets/Logo.png" alt="site logo" class="book-debt-logo">
                 <h1><a href="index.html">Book Debt</a></h1>
-            </head>
+            </header>
 
             <!--List of Links that Guide Visitors to Other Pages
             Same for all Pages-->
@@ -40,7 +46,113 @@
 
             <!--The Main Content-->
             <main>
+                <h2><center>Info To Know</center></h2>
+                <div class="flow">
 
+                    <section>
+                        <h3><center>Benifits</center></h3>
+                        <dl>
+                            <dt class="reasons-list-style-1">Tackle Your "To-Read" List</dt>
+                            <ul>
+                                <li>
+                                    Book Debt gives you the incentive to 
+                                    read more. The more books you read
+                                    means the more books you can
+                                    later buy.
+                                </li>
+                            </ul>
+                            <br>
+                            <dt class="reasons-list-style-1">Saves You Money</dt>
+                            <ul>
+                                <li>No more overspending on books.</li>
+                                <br>
+                                <li>Maintains a visible, easy budget to follow</li>
+                            </ul>
+                            <br>
+                            <dt class="reasons-list-style-1">Get more out of the books you have</dt>
+                            <ul>
+                                <li>
+                                    Able to reread and re-explore your book 
+                                    collection.
+                                </li>
+                            </ul>
+                        </dl>
+                    </section>
+                        
+                    <section>
+                        <h3><center>Usages</center></h3>
+                        <dl>
+                            <dt class="reasons-list-style-1">Manage Purchases</dt>
+                            
+                            <ul class="ustom-list-style-2">
+                                <li>Keep Record of your books Read</li>
+                                <br>
+                                <li>Keep Record of the books you Bought</li>
+                                <br>
+                                <li>Display your reading milestones</li>
+                            </ul>
+                            
+                        </dl>
+                    </section>
+
+                    <section>
+                        <h3><center>Formats</center></h3>
+                        <dl>
+                            <dt class="reasons-list-style-1">Documents</dt>
+                            <ul>
+                                <li>Google Sheets</li>
+                                <br>
+                                <li>Microsoft Exel</li>
+                            </ul>
+                        </dl>
+                    </section>
+
+                </div>
+
+                <!--Make Special Button-->
+                <div class="button-position">
+                    <a href="Templet/Book Debt Template.xlsx" class="download" download="BookDebtTemp.xlsx">
+                        <img src="Website Image Assets/Download_Button.png" alt="Download a Book Debt Sheet" class="fancy-download-button">
+                    </a>
+                </div>
+
+                <div>
+                    <h3>What to Expect:</h3>
+
+                    <table>
+                        <tr>
+                            <th colspan="5">Title: Book Debt</th>
+                        </tr>
+
+                        <tr>
+                            <td><b>Book Title</b>, <i>author(s)</i></td>
+                            <td>Amount of times you bought this book</td>
+                            <td>Amount of times you read the book</td>
+                            <td>
+                                Evaluation Integer: 
+                                <br><br>
+                                (<i>Bought</i> - <i>Read</i>)
+                            </td>
+
+                            <td>
+                                Evaluation of your Next Purchase
+                                <br><br>
+                                (<i>Credit or Debt accumilated</i>)
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+                <br>
+                <!--The Next Webpage Button-->
+                <div class="button-position">
+                    <a href="howto.html" class="next-link">Learn How to Use Your New Book Debt Sheet</a>
+                </div>
+
+                <br>
+                <br>
+                <br>
             </main>
             <!--End of Main Content-->
 
@@ -48,12 +160,12 @@
         <!--End of Styles Wrapper-->
 
         <br>
-        <!--Out Side of Style Box
+        <!--Outside of Style Box
         For Footer
         Same for all Webpages-->
         <footer>
-            <div id="contact">&copy; 2025 Book Debt</div>
-            <div id="contact"><a href="mailto: nnmajor@asu.edu">nnmajor@asu.edu</a></div>
+            <div id="Copy Right">&copy; 2025 Book Debt</div>
+            <div id="Email"><a href="mailto: nnmajor@asu.edu">nnmajor@asu.edu</a></div>
         </footer>
         
     </body>
