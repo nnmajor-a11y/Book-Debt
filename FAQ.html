@@ -5,13 +5,18 @@
     <head>
         <title>Book Debt</title>
         <!--Logo for the Head-->
-        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="Website Image Assets/favicon_io/favicon.ico" type="image/x-icon">
+        <link rel="android-chrome-192x192" href="Website Image Assets/favicon_io/android-chrome-192x192.png" type="image/png">
+        <link rel="apple-touch-icon" href="Website Image Assets/favicon_io/apple-touch-icon.png" type="image/png">
 
         <!--Meta-->
         <meta charset="utf-8">
         <!--Inclue Different Screen Size-->
-        <meta name="viewport" content="width=device-width, initial-scal=1.0">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Meta Discriptions-->
+        <meta name="Description" content="
+           
+        ">
         <!--Link to the Styles Sheet CSS-->
         <link rel="stylesheet" href="bookdebt.css">
 
@@ -23,9 +28,10 @@
         <div id="wrapper">
             <!--The Title of Webpage
             Same for every Webpage on Website-->
-            <head>
+            <header class="better-header">
+                <img src="Website Image Assets/Logo.png" alt="site logo" class="book-debt-logo">
                 <h1><a href="index.html">Book Debt</a></h1>
-            </head>
+            </header>
 
             <!--List of Links that Guide Visitors to Other Pages
             Same for all Pages-->
@@ -40,7 +46,58 @@
 
             <!--The Main Content-->
             <main>
+                
+                <h2 class="center-text">Frequently Asked Questions</h2>
+                <div class="form-position">
+                    <form action="mailto:nnmajor@asu.edu" method="post" enctype="text/plain">
+                        <fieldset>
+                            <legend>Required Information</legend>
 
+                            <div class="name-info-row">
+                                <div class="first-name-input">
+                                    <label for="fName">* First Name:</label>
+                                    <input type="text" name="fName" id="fName" required>
+                                </div>
+                    
+                                <div class="last-name-input">
+                                    <label for="lName">* Last Name:</label>
+                                    <input type="text" name="lName" id="lName" required>
+                                </div>
+                            </div>
+
+                            <div class="email-input">
+                                <label for="email">* Email:</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Questions Form</legend>
+
+                            <div class="questions-input">
+                                <label for="questions">Your Question:</label>
+                                <textarea name="questions" id="questions" rows="5" cols="30" placeholder="Write up your questions here, if any:"></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Ratings Form</legend>
+
+                            <label for="ratings">Rate between 1–5:</label>
+                            <input type="number" name="ratings" id="ratings" min="1" max="5">
+
+                            <div class="feedback-input">
+                                <label for="feedback">Your Feedback:</label>
+                                <textarea name="feedback" id="feedback" rows="5" cols="30" placeholder="Write up your feedback here, if any:"></textarea>
+                            </div>
+                        </fieldset>
+
+
+                        <div>
+                            <button type="submit" class="next-link">Sumbit</button>
+                        </div>
+                    </form>
+                </div>
             </main>
             <!--End of Main Content-->
 
@@ -52,8 +109,8 @@
         For Footer
         Same for all Webpages-->
         <footer>
-            <div id="contact">&copy; 2025 Book Debt</div>
-            <div id="contact"><a href="mailto: nnmajor@asu.edu">nnmajor@asu.edu</a></div>
+            <div id="Copy Right">&copy; 2025 Book Debt</div>
+            <div id="Email"><a href="mailto: nnmajor@asu.edu">nnmajor@asu.edu</a></div>
         </footer>
         
     </body>
