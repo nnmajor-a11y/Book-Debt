@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <!--Start Of WebSite Code-->
 <html lang="en">
-    <!--Start of Head (Not Webpage Itself)-->
-    <head>
-        <title>Book Debt</title>
-        <!--Logo for the Head-->
-        <link rel="icon" href="Website Image Assets/favicon_io/favicon.ico" type="image/x-icon">
-        <link rel="android-chrome-192x192" href="Website Image Assets/favicon_io/android-chrome-192x192.png" type="image/png">
-        <link rel="apple-touch-icon" href="Website Image Assets/favicon_io/apple-touch-icon.png" type="image/png">
 
-        <!--Meta-->
-        <meta charset="utf-8">
-        <!--Inclue Different Screen Size-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Meta Discriptions-->
-        <meta name="Description" content="
-            Learn how to use a Book Debt and
-            keep track of your spending on books,
-            tackle that reading list, and more! 
+<!--Start of Head (Not Webpage Itself)-->
+<head>
+    <title>Book_Debt :: How-To</title>
+    <!--Logo for the Head-->
+    <link rel="icon" href="Website_Image_Assets/Logo.png" type="image/x-icon">
+    <link rel="android-chrome-192x192" href="Website_Image_Assets/favicon_io/android-chrome-192x192.png"
+        type="image/png">
+    <link rel="apple-touch-icon" href="Website_Image_Assets/favicon_io/apple-touch-icon.png" type="image/png">
+
+    <!--Credit: Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Meta-->
+    <meta charset="utf-8">
+    <!--Inclue Different Screen Size-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Discriptions-->
+    <meta name="Description" content="
+        Learn how to use a Book Debt and
+        keep track of your spending on books,
+        tackle that reading-list, and more!
         ">
-        <!--Link to the Styles Sheet CSS-->
-        <link rel="stylesheet" href="bookdebt.css">
+    <!--Link to the Styles Sheet CSS-->
+    <link rel="stylesheet" href="bookdebt.css">
 
-    </head>
-    <!--End of Head-->
+</head>
+<!--End of Head-->
 
-    <body>
-        <!--Styles Div ID Wrapper Start-->
-        <div id="wrapper">
-            <!--The Title of Webpage
+<body>
+    <!--Styles Div ID Wrapper Start-->
+    <div id="wrapper">
+        <!--The Title of Webpage
             Same for every Webpage on Website-->
-             <header class="better-header">
-                <img src="Website Image Assets/Logo.png" alt="site logo" class="book-debt-logo">
-                <h1><a href="index.html">Book Debt</a></h1>
-            </header>
+        <header class="better-header">
+            <img src="Website_Image_Assets/Logo.png" alt="site logo" class="book-debt-logo">
+            <h1><a href="index.html">Book Debt</a></h1>
+        </header>
 
-            <!--List of Links that Guide Visitors to Other Pages
+        <!--List of Links that Guide Visitors to Other Pages
             Same for all Pages-->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="download.html">Download</a></li>
-                    <li><a href="howto.html">How To Use</a></li>
-                    <li><a href="FAQ.html">FAQ's</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="howto.html">How To</a></li>
+                <li><a href="FAQ.html">FAQ's</a></li>
+            </ul>
+        </nav>
 
-            <!--The Main Content-->
-            <main>
-
-                <table>
+        <!--The Main Content-->
+        <main>
+            <div class="how-to-format">
+                <table class="smaller-table">
                     <!--Title-->
                     <tr>
                         <th colspan="3">How To Understand Your Book Debt Sheet</th>
@@ -66,19 +73,17 @@
                     <tr>
                         <!--Term-->
                         <td>
-                            Negative 1 
+                            Negative 1
                             <br>
                             in the <i>"Evaluation Integer"</i> Cell.
                         </td>
 
                         <!--Meaning-->
-                        <td class="table-meaning">
+                        <td>
                             <ul>
-                                <li>The User has bought a book</li>
-                                <br>
-                                <li>Has NOT READ the book listed in the row</li>
-                                <br>
-                                <li><b>Debt Earned</b></li>
+                                <li class="table-meaning">The User has bought a book</li>
+                                <li class="table-meaning">Has NOT READ the book listed in the row</li>
+                                <li class="table-meaning"><b>Debt Earned</b></li>
                             </ul>
                         </td>
 
@@ -99,11 +104,10 @@
                         </td>
 
                         <!--Meaning-->
-                        <td class="table-meaning">
+                        <td>
                             <ul>
-                                <li>The User has the book listed in the row.</li>
-                                <br>
-                                <li><b>Canceld-Out Debt for One book</b></li>
+                                <li class="table-meaning">The User has the book listed in the row.</li>
+                                <li class="table-meaning"><b>Canceld-Out Debt for One book</b></li>
                             </ul>
                         </td>
 
@@ -117,65 +121,59 @@
                     <tr>
                         <!--Term-->
                         <td>
-                            Positive Numbers 
+                            Positive Numbers
                             <br>
-                            in the 
+                            in the
                             <i>"Evaluation Integer"</i> Cell.
-                            <br><br> 
-                            <span class="small-note">'x' being any number.</span> 
+                            <br>
+                            <span class="small-note">'x' being any number.</span>
                         </td>
 
                         <!--Meaning-->
-                        <td class="table-meaning">
+                        <td>
                             <ul>
-                            <li>The number of times the book
-                                listed in this row HAS been READ.
-                            </li>
-                            <br>
-                            <li><b>Credit Earned</b></li>
+                                <li class="table-meaning">The number of times the book
+                                    listed in this row HAS been READ.
+                                </li>
+                                <li class="table-meaning"><b>Credit Earned</b></li>
                             </ul>
                         </td>
 
                         <!--Example-->
                         <td>
                             <span class="example">+ X </span>
-                            <dl>
-                                <span class="small-note">i.e. "The user read this bought book
-                                'x' many times"</span>
-                            </dl>
+                            <br><br>
+                            <span class="small-note">i.e. "The user read this bought book 'x' many times"</span>
                         </td>
                     </tr>
-                    
+
                     <!--Row  4-->
                     <tr>
                         <!--Term-->
                         <td>
                             Any Negative Number Below (-1)
-                            <br> 
+                            <br>
                             in the <i>"Evaluation Integer"</i> Cell.
-                            <br><br>
+                            <br>
                             <span class="small-note">'-x'</span>
                         </td>
 
                         <!--Meaning-->
-                        <td class="table-meaning">
+                        <td>
                             <ul>
-                            <li>
-                                The number of times the book
-                                listed in this row has been bought.
-                            </li>
-                            <br>
-                            <li><b>Ranked up debt with the same book</b></li>
-                           </ul> 
+                                <li class="table-meaning">
+                                    The number of times the book
+                                    listed in this row has been bought.
+                                </li>
+                                <li class="table-meaning"><b>Ranked up debt with the same book</b></li>
+                            </ul>
                         </td>
 
                         <!--Example-->
                         <td>
-                            <span class="example">- X</span> 
-                            <dl>
-                            <span class="small-note">i.e. "The user bought the same book
-                            'x' many times"</span>
-                            </dl>
+                            <span class="example">- X</span>
+                            <br><br>
+                            <span class="small-note">i.e. "The user bought the same book 'x' many times"</span>
                         </td>
                     </tr>
 
@@ -183,29 +181,27 @@
                     <tr>
                         <!--Term-->
                         <td>
-                            Any Positive Number 
+                            Any Positive Number
                             <br>
                             in the <i>"Evaluate
-                            Next Purchase"</i> Cell.
+                                Next Purchase"</i> Cell.
                         </td>
 
                         <!--Meaning-->
-                        <td class="table-meaning">
+                        <td>
                             <ul>
-                                <li><b>You CAN BUY more books!</b></li>
+                                <li class="table-meaning"><b>You CAN BUY more books!</b></li>
                             </ul>
-                            
+
                         </td>
 
                         <!--Example-->
                         <td>
                             <br>
                             <span class="text-example"><b>Accumulated Credit</b></span>
-                            <dl>
-                                <span class="small-note">Buy number of books According to this 
-                                Positive Number Shown</span>
-                            </dl>
-                             
+                            <br><br>
+                            <span class="small-note">Buy number of books According to this Positive Number Shown</span>
+
                         </td>
                     </tr>
 
@@ -215,13 +211,13 @@
                         <td>
                             Any Negative Number
                             <br>
-                            in the <i>"Evaluate Next Purchase"</i> Cell. 
+                            in the <i>"Evaluate Next Purchase"</i> Cell.
                         </td>
 
                         <!--Meaning-->
-                        <td class="table-meaning">
+                        <td>
                             <ul>
-                                <li><b>You CAN'T buy any books</b></li>
+                                <li class="table-meaning"><b>You CAN'T buy any books</b></li>
                             </ul>
                         </td>
 
@@ -229,40 +225,39 @@
                         <td>
                             <br>
                             <span class="text-example"><b>Accumulated Debt</b></span>
-                            <dl>
-                                <span class="small-note">Read number of books According to this 
-                                Negative Number Shown</span>
-                            </dl> 
+                            <br><br>
+                            <span class="small-note">Read number of books According to this Negative Number Shown</span>
+
                         </td>
                     </tr>
 
                 </table>
-                
-                <h2><center>Still Have Questions?</center></h2>
-                <h3><center>Ask Them Through The Forums!</center></h3>
-                <div class="button-position">
-                    <a href="FAQ.html" class="next-link">Submit your Questions Here</a>
-                </div>
+            </div>
 
-                <br><br>
-            </main>
-            <!--End of Main Content-->
 
-        </div>
-        <!--End of Styles Wrapper-->
+            <h2 class="center-text">Still Have Questions?</h2>
+            <h3 class="center-text">Ask Them Through The Forums!</h3>
 
-        <br>
-        <!--Outside of Style Box
+            <div class="button-position">
+                <a href="FAQ.html" class="next-link fancy-button-effect">Submit your Questions Here</a>
+            </div>
+
+            <br><br>
+        </main>
+        <!--End of Main Content-->
+
+    </div>
+    <!--End of Styles Wrapper-->
+
+    <!--Out Side of Style Box
         For Footer
         Same for all Webpages-->
-        <footer>
-            <div id="Copy Right">&copy; 2025 Book Debt</div>
-            <div id="Email"><a href="mailto: nnmajor@asu.edu">nnmajor@asu.edu</a></div>
-        </footer>
-        
-    </body>
-    <br>
-    <br>
-    <br>
+    <footer>
+        <div id="copyright">&copy; 2025 Book Debt</div>
+        <div id="Email"><a href="mailto:nnmajor@asu.edu">nnmajor@asu.edu</a></div>
+    </footer>
+
+</body>
+
 </html>
 <!--End of Website code-->
