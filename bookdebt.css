@@ -3,9 +3,10 @@ header {
     background-color: #220b24;
     font-size: x-large;
     /*Source: Google Fonts*/
-    font-family: 'Tangerine', cursive;
+    font-family: 'Tangerine', Georgia, 'Times New Roman', Times, serif;
 }
 
+/*Google Font's CSS code*/
 @font-face {
     font-family: 'Tangerine';
     src: url('Google_Tangerine/Tangerine-Regular.ttf') format('truetype');
@@ -60,6 +61,8 @@ h1,
 h2,
 h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.085em;
+
 }
 
 h2 {
@@ -79,6 +82,7 @@ h3 {
 
 .center-text {
     text-align: center;
+    letter-spacing: 0.2em;
 }
 
 
@@ -166,7 +170,7 @@ a {
 /*Styles for the Image Placement(s)-------------------*/
 
 #indexBanner {
-    height: 480px;
+    height: 550px;
     width: 100%;
     background-repeat: no-repeat;
     background-image: url(Website_Image_Assets/Banner.jpg);
@@ -174,6 +178,30 @@ a {
     margin-bottom: 2em;
     justify-content: center;
     border-radius: 12px;
+}
+
+#Bookshelf_L,
+#Bookshelf_R {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-repeat: repeat-y;
+    background-size: 50%;
+    z-index: -1;
+    filter: opacity(0.75);
+}
+
+#Bookshelf_R {
+    right: 0;
+    background-image: url(Website_Image_Assets/Bookshelf_L.png);
+    background-position: calc(100% + 40px) top;
+}
+
+#Bookshelf_L {
+    left: 0;
+    background-image: url(Website_Image_Assets/Bookshelf_L.png);
+    background-position: -40px top;
 }
 
 /*Styles for the Webpage Content-------------------*/
@@ -218,7 +246,7 @@ dt {
     font-size: 1.2em;
     padding-bottom: 0.2em;
     margin-right: 0.5em;
-
+    letter-spacing: 0.08em;
 }
 
 dd {
@@ -228,7 +256,9 @@ dd {
 .custom-list-style-3 {
     list-style-type: disc;
     list-style-position: outside;
-    text-indent: -1.5em;
+    text-indent: 0;
+    letter-spacing: 0.08em;
+    line-height: 1.5em;
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-top: 0.5em;
@@ -315,6 +345,8 @@ th {
     padding: 0.5em;
     border: 3.5px solid #abb5d0;
     text-align: center;
+    line-height: 1.5em;
+    letter-spacing: 0.03em;
 }
 
 td dl {
@@ -353,7 +385,6 @@ td dl {
     margin-left: auto;
     margin-right: 0;
     font-size: 0.85em;
-
 }
 
 /*Style for the Site-------------------*/
@@ -373,18 +404,30 @@ p {
     margin: 2px auto;
     padding: 30px 30px 30px 30px;
     border-radius: 15px;
+    letter-spacing: 0.06em;
 }
 
 .section-indent {
     padding-left: 2em;
 }
 
+.disclaimer {
+    margin: auto;
+    margin-top: 2em;
+    background-color: #443178;
+    color: #fff;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-indent: 0;
+    line-height: 1.5em;
+}
+
 /*Form edits-------------------*/
 form {
-    max-width: 600px;
+    max-width: 1000px;
     width: 100%;
-    margin-left: 4em;
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 fieldset {
@@ -475,16 +518,16 @@ label {
 
 /* FORM POSITIONING */
 .form-position {
-    max-width: 600px;
-    width: 90%;
-    margin-inline-start: 2em;
-    /* pushes to the right */
-    margin-block: 2em;
+    max-width: 750px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
 }
 
 
 .form-position form {
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 12px;
     background-color: #443178;
     box-sizing: border-box;
@@ -549,7 +592,7 @@ label {
         margin: auto;
         width: 90%;
         border: 2px solid #2e0e24;
-        box-shadow: 0.1em .5em 0.5em #2e0e34;
+        box-shadow: 0.1em .5em 0.5em #ee8dff;
     }
 
     h1 {
@@ -618,7 +661,7 @@ label {
         margin: auto;
         width: 75%;
         border: 2px solid #2e0e24;
-        box-shadow: 0.1em .1em 0.5em #e385f3;
+        box-shadow: 0.2em 0.1em 0.5em #ee8dff, -0.2em 0.2em 0.5em #ee8dff;
     }
 
     h1 {
@@ -652,8 +695,63 @@ label {
         padding: 0.2em;
     }
 
-    nav a{
+    nav a {
         align-items: center;
+    }
+
+
+    /*FAQ SEC*/
+    .faq-container {
+        display: flex;
+        gap: 2em;
+        flex-direction: row;
+        margin-top: 2em;
+        align-items: flex-start;
+    }
+
+    /*In-Page Nav edits*/
+    .faq-sidebar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+        background-color: #694f9b8d;
+        border-radius: 20px;
+        min-width: 100px;
+        width: 30%;
+        position: top left;
+        top: 2em;
+    }
+
+    .faq-sidebar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        list-style-image: url(Website_Image_Assets/bullet_io/bullet.ico);
+        padding: 0;
+        margin: 0;
+    }
+
+    .faq-sidebar li {
+        border: none;
+        margin-bottom: 1em;
+        margin-left: 7em;
+        padding-right: 3.5em;
+        text-align: left;
+        line-height: 1.5em;
+        font-size: 20px;
+    }
+
+    .faq-sidebar nav a:link,
+    .faq-sidebar a:visited {
+        color: #ffc680;
+        text-decoration: none;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .faq-sidebar a:hover {
+        color: #fdebd7;
+        text-decoration: none;
     }
 
     /*Keep to Adjust colum
@@ -674,13 +772,8 @@ label {
     }
 
     /*Flipping Forum*/
-    .side-article-format {
-        width: 50%;
-        margin-left: 24em;
-        margin-right: 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
+    .faq-content {
+        flex: 1;
     }
 
 }
