@@ -170,38 +170,52 @@ a {
 /*Styles for the Image Placement(s)-------------------*/
 
 #indexBanner {
-    height: 550px;
+    height: auto;
     width: 100%;
+    aspect-ratio: 1440 / 960;
     background-repeat: no-repeat;
-    background-image: url(Website_Image_Assets/Banner.jpg);
-    background-size: 100% 100%;
-    margin-bottom: 2em;
-    justify-content: center;
+    background-image: url(Website_Image_Assets/Banner.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 12px;
+    margin-bottom: 2em;
+}
+
+.banner-cap{
+    color: #ffc680;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    max-width: 80%; 
+    margin-top: 0; 
+    padding-top: 0%;
+    margin-bottom: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #Bookshelf_L,
 #Bookshelf_R {
-   position: fixed;
+    position: fixed;
     top: 0;
     bottom: 0;
-    width: 900px; /* or a specific pixel width that matches the image */
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    width: 400px;
+    background-repeat: repeat-y;
+    background-size: cover;
     z-index: -1;
     filter: opacity(0.75);
+    pointer-events: none;
 }
 
 #Bookshelf_R {
-    right: 0;
-    background-image: url(Website_Image_Assets/Bookshelf_L.png);
-    background-position: calc(100% + 40px) top;
+    right: -3em;
+    background-image: url(Website_Image_Assets/Bookshelf_R.webp);
+    background-position: right top;
 }
 
 #Bookshelf_L {
-    left: 0;
-    background-image: url(Website_Image_Assets/Bookshelf_L.png);
-    background-position: -40px top;
+    left: -3em;
+    background-image: url(Website_Image_Assets/Bookshelf_R.webp);
+    background-position: left top;
 }
 
 /*Styles for the Webpage Content-------------------*/
@@ -387,6 +401,18 @@ td dl {
     font-size: 0.85em;
 }
 
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+
+.table-wrapper table {
+    width: 100%;
+    min-width: 600px;
+    display: block;
+}
+
 /*Style for the Site-------------------*/
 html,
 body {
@@ -541,6 +567,10 @@ label {
 #wrapper {
     background-color: #5a2b5d;
     background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
 }
 
 .submit-button-fixed {
@@ -583,6 +613,13 @@ label {
     animation: float 3s ease-in-out infinite;
 }
 
+.flow {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
 /*Styles for Media Format(s)-------------------*/
 
 /*Smaller Screens ie. Phones*/
@@ -591,10 +628,14 @@ label {
     #wrapper {
         margin: auto;
         width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1em;
         border: 2px solid #2e0e24;
         box-shadow: 0.1em .5em 0.5em #ee8dff;
     }
 
+    /*  HEADING NAV AND H1.. IM TIRED*/
     h1 {
         margin: 0;
         padding: .5em .5em;
@@ -610,7 +651,6 @@ label {
 
     nav li {
         margin: 0.5em 0;
-        /* Space between links */
         border: 2px solid #902c45;
         width: 90%;
         text-align: center;
@@ -619,6 +659,33 @@ label {
     }
 
     /*Form Section*/
+    .faq-sidebar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 1.5em;
+        background-color: #694f9b8d;
+        border-radius: 20px;
+    }
+
+    .faq-sidebar ul, 
+    .faq-sidebar li{
+        border: none;
+    }
+
+    .faq-sidebar nav a:link,
+    .faq-sidebar a:visited {
+        color: #ffc680;
+        text-decoration: none;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .faq-sidebar a:hover {
+        color: #fdebd7;
+        text-decoration: none;
+    }
 
     form {
         display: flex;
@@ -651,7 +718,27 @@ label {
 
     }
 
+    /*TABLES STOP GOING OUT OF BOUNDS*/
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
 
+    .table-wrapper table {
+        width: 100%;
+        min-width: 600px;
+        display: block;
+    }
+
+}
+
+/*Other Smaller Screens Tablets?*/
+@media (max-width: 600px) {
+
+    #Bookshelf_L,
+    #Bookshelf_R {
+        display: none;
+    }
 }
 
 /*medium Screens*/
@@ -659,7 +746,7 @@ label {
 
     #wrapper {
         margin: auto;
-        width: 75%;
+        width: 76%;
         border: 2px solid #2e0e24;
         box-shadow: 0.2em 0.1em 0.5em #ee8dff, -0.2em 0.2em 0.5em #ee8dff;
     }
@@ -718,7 +805,6 @@ label {
         border-radius: 20px;
         min-width: 100px;
         width: 30%;
-        position: top left;
         top: 2em;
     }
 
@@ -754,6 +840,8 @@ label {
         text-decoration: none;
     }
 
+
+    /*  DOWNLOAD PAGE FORMAT*/
     /*Keep to Adjust colum
     Section for Colums*/
     section {
@@ -769,6 +857,14 @@ label {
     .flow {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .flow section {
+        flex: 1 1 calc(33.33% - 1em);
+        box-sizing: border-box;
+        margin: 0;
     }
 
     /*Flipping Forum*/
