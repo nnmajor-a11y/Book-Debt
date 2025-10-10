@@ -137,7 +137,7 @@ a {
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
-    color: #3e1641
+    color: #f0bc88
 }
 
 .fancy-download-button {
@@ -161,7 +161,7 @@ a {
 
 
 .fancy-button-effect:hover {
-    color: #f0bc88;
+    color: #fff;
     transform: translateY(-5px);
     transition: color 0.2s ease-out, 0.2s ease-out;
     filter: brightness(0.95);
